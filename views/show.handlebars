@@ -1,0 +1,25 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">CITY</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr class="table-active">
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td>{{this.city}}</td>
+      <td><a href="/del/{{this.id}}" class="btn btn-danger">DELETE</a></td>
+      <td><a href="/update/{{this.id}}" class="btn btn-info">UPDATE</a></td>
+    </tr>
+    {{/each}}
+   
+  </tbody>
+</table>
